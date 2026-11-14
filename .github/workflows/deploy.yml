@@ -31,10 +31,9 @@ jobs:
         working-directory: client
 
       - name: Build frontend
-        run: npm run build
+        run: npm run build -- --base=/Online-Course-Management/
         working-directory: client
         env:
-          GITHUB_PAGES: "true"
           VITE_API_URL: ${{ vars.VITE_API_URL }}
 
       - name: Setup Pages
